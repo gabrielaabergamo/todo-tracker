@@ -1,15 +1,25 @@
-let todo = document.createElement('li')
-
-todo.textContent = "estudar"
-
+let formUser = document.querySelector('form')
 let todoList = document.querySelector('ul')
+let botaoClear = document.querySelector('button')
+let inputUser = document.getElementById('user-todo')
 
-todoList.appendChild(todo)
+formUser.addEventListener('submit', function(e){
+    e.preventDefault()
+    todoMaker(inputUser.value)
+    inputUser.value = ''
+    
+})
 
-// para remover precisamos remover duas vezes
-// todoList.removeChild(todoList.firstChild)
-// todoList.removeChild(todoList.firstChild)
-
-while(todoList.firstChild){
-    todoList.removeChild(todoList.firstChild)
+function todoMaker(valor){
+    let addTodo = document.createElement('li')
+    addTodo.textContent = valor
+    todoList.appendChild(addTodo)
 }
+
+
+botaoClear.addEventListener('click', function(){
+    while(todoList.firstChild){
+        todoList.removeChild(todoList.firstChild)
+    }
+})
+
