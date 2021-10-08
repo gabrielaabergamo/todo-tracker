@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Roboto&display=swap');
+* {
+    /* elemento respeita limite de tamanho, mesmo com padding */
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f1e3d3;
+}
+
+.container {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #c6e871;
+    padding: 40px;
+    border-radius: 5px;
+}
+h1, h2{
+    font-family: 'Comic Neue', cursive;
+    color: #1433D9;
+    margin-bottom: 0;
+}
+h1{
+    text-align: center;
+}
+li{
+    font-family: 'Montserrat', sans-serif;
+}
+input{
+    width: 40%;
+    height: 27px;
+}
+form input:focus-visible{
+    outline-color: #1433D9;
+}
+span{
+    font-family: 'Montserrat', sans-serif;
+    opacity: 60%;
+}
+button{
+    width: 100px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FF9FD5;
+    border-width: 1.5px;
+}
